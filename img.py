@@ -5,15 +5,16 @@ Created on Tue Nov 27 12:36:54 2018
 @author: sampr
 """
 from tkinter import *
-from interface import user_interface
+from interface import user_interface as UI
 
 def app():  
     root = Tk()
     root.title('Digit Image Recognition Program')
     root.resizable(False,False)
+    root.geometry('700x500+350+50') 
 
-    fm = user_interface(root)
-    fm.pack(side=TOP, expand=NO, fill=NONE)
+    fm = UI(root)
+    fm.place(x=0, y=0)
 
     root.mainloop()   
 
